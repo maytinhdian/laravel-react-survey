@@ -194,7 +194,7 @@ export const ContextProvider = ({ children }) => {
   });
 
   //Sử dụng token để xác định trạng thái đăng nhập
-  const [userToken, setUserToken] = useState("1234");
+  const [userToken, setUserToken] = useState("");
 
   const [surveys, setSurveys] = useState(tmpSurveys);
 
