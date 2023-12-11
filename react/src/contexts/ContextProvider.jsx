@@ -186,17 +186,11 @@ const tmpSurveys = [
 ];
 
 export const ContextProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState({
-    name: "Tom Cook",
-    email: "tnhalk@example.com",
-    imageUrl:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-  });
-
-  //Sử dụng token để xác định trạng thái đăng nhập
-  const [userToken, setUserToken] = useState("");
-
+  const [currentUser, setCurrentUser] = useState({});
+  const [userToken, setUserToken] = useState(''); //Sử dụng token để xác định trạng thái đăng nhập
   const [surveys, setSurveys] = useState(tmpSurveys);
+
+  
 
   return (
     <StateContext.Provider
