@@ -187,10 +187,18 @@ const tmpSurveys = [
 
 export const ContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState({});
-  const [userToken, setUserToken] = useState(''); //Sử dụng token để xác định trạng thái đăng nhập
+  const [userToken, _setUserToken] = useState(localStorage.getItem('TOKEN')||''); //Sử dụng token để xác định trạng thái đăng nhập
   const [surveys, setSurveys] = useState(tmpSurveys);
 
-  
+  const setUserToken = (token)=>{
+    if (token) {
+      localStorage.setItem('TOKEN',token)
+    }
+    else{
+      localStorage.removeItem('TOKEN')
+    }
+    _setUserToken(token);
+  }
 
   return (
     <StateContext.Provider

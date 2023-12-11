@@ -47,7 +47,6 @@ export default function Signup() {
         Signup for free
       </h2>
       <p className="mt-2 text-center text-sm text-gray-600">
-        Or{" "}
         <Link
           to="/login"
           className="font-medium text-indigo-600 hover:text-indigo-500"
